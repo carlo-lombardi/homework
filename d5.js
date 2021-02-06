@@ -18,7 +18,7 @@ const sum = 16 - 12;
     Create a variable random that contains a random number between 0 and 20 (should be randomly created at each execution).
 */
 
-const random = (Math.floor(Math.random() * 21));
+const random = (Math.floor(Math.random() * 20));
 //console.log("Here is your random number: " + random)
 
 /* Ex.D
@@ -64,7 +64,7 @@ myInfo.skills = "Some Javascript"
 */
 
 const dice = () => {
-    let dice= (Math.floor(Math.random() * 7))
+    let dice= (Math.floor(Math.random() * 6) + 1) // between 1 and 6 (the number +1 start from it)
 
     return dice
 }
@@ -100,10 +100,19 @@ const splitMe = function (str) {
     Write the function deleteOne that receives a string and a boolean. If the boolean is true it should return the string without the first letter, otherwise it should remove the last one.
 */
 
+    function deleteOne(s, b){
+        if (b === true ){
+            let result = s.substring(1)
+            return result
+        }
+        else
+        {
+            let result = s.slice(0, -1)
+            return result
+        } 
 
-//no idea
-
-
+    }
+    console.log(deleteOne("Whatever", false))
 
 /* Ex.5
    Write the function onlyLetters that receives a string, removes all the numbers and returns it.
